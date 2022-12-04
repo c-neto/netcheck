@@ -1,8 +1,15 @@
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [package]
 name = "netcheck"
 version = "0.1.0"
 edition = "2021"
+authors = ["Carlos Neto <carlos.neto.dev@gmail.com>"]
+categories = ["command-line-utilities"]
+description = "CLI tool to check if a IP is public or private"
+homepage = "https://github.com/augustoliks/netcheck/README.md"
+repository = "https://github.com/augustoliks/netcheck"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[profile.release]
+lto = true
+codegen-units = 1
